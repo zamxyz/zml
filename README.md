@@ -24,14 +24,14 @@ $ pip2 install requests
 
 $ pip2 install mechanize
 
-$ git clone https://github.com/zamxyz/zml
+$ git clone https://github.com/zamxyz/zml.py
 
 
 # • **RUN**
 
-$ cd zml
+$ cd zml.py
 
-$ python2 zml
+$ python2 zml.py
 
 # • _**NOTE**_
 
