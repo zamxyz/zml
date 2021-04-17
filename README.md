@@ -31,3 +31,7 @@ $ git clone https://github.com/zamxyz/zml
 $ cd zml
 
 $ python2 zml
+
+# • _**NOTE**_
+
+[!] JIKA TERJADI MACET SAAT LOADING MATIKAN DATA TERLEBIH DAHULU LALU HIDUPKANM..!!
