@@ -1,6 +1,9 @@
-# 　 　**_⚘ＺＭＬ⚘_**
+# 　 　**_⚘ZAMUEL VELDORA⚘_**
 
 ![FB_IMG_16168546863571276](https://user-images.githubusercontent.com/79139059/115128175-1e16f100-a006-11eb-9b9f-21aed4a1f5ac.jpg)
+
+# 　 　**_⚘ＺＭＬ⚘_**
+![IMG_20210418_215117](https://user-images.githubusercontent.com/79139059/115150167-6af3d980-a091-11eb-9945-3363161575e5.jpg)
 
 
 # • **LOGIN METODE**
